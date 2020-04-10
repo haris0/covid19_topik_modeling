@@ -2,4 +2,5 @@ env/
 .vscode
 src/view/__pycache__
 src/tweet_fun/__pycache__
+src/analytic/__pycache__
 covidtweet.csv
