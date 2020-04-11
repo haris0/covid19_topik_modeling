@@ -256,6 +256,7 @@ hendak
 hendaklah
 hendaknya
 hingga
+i
 ia
 ialah
 ibarat
@@ -469,6 +470,7 @@ mirip
 misal
 misalkan
 misalnya
+mu
 mula
 mulai
 mulailah

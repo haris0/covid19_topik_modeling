@@ -11,7 +11,8 @@ def tweet_cleaner(text):
   pat1 = r'@[A-Za-z0-9]+'
   pat2 = r'\w+:\/\/\S+'
   pat3 = r'pic.twitter.com/+'
-  combined_pat = r'|'.join((pat1, pat2, pat3))
+  pat4 = r'\W*\b\w{1,3}\b'
+  combined_pat = r'|'.join((pat1, pat2, pat3, pat4))
   soup = BeautifulSoup(text, 'lxml')
   souped = soup.get_text()
   stripped = re.sub(combined_pat, '', souped)
@@ -59,4 +60,8 @@ def clean_part3(df, keyword):
   stopword = get_stopword(keyword)
   df['tweet'] = df['tweet'].apply(lambda text: stopword_removal(text, stopword))
   return df
+
+def extract_topic(text):
+  letters_only = re.sub("[^a-zA-Z+ ]", "", text)
+  return letters_only
 
