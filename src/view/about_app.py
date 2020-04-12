@@ -8,7 +8,7 @@ def about_app():
           Dengan membuat sebuah tool untuk analisi data yang ada di tweeter sehingga dapat 
           membantu kita dalam mengetahui topik ada saja yang sedang dibicarakan di tweeter, 
           Adapun analisis yang dilakukan mencakup **Wordcount** dan **Pemodelan Topik** dengan
-          algoritma Latent Dirchlect Allocation(LDA) baca lebih lanjut tentang LDS
+          algoritma Latent Dirchlect Allocation(LDA) baca lebih lanjut tentang LDA
           [disini](https://medium.com/@ranggaantok/topic-modelling-menggunakan-latent-dirchlect-allocation-3fdf979ffd05).\n
           Aplikasi ini juga dilengkapi dengan berbagai informasi tentang Covid19 baik secara Global
           maupun regional.\n\n\n
