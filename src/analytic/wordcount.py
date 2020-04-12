@@ -29,7 +29,7 @@ def get_top15(df):
   df_top15.sort_values(by='count').plot.barh(x='words',
                                               y='count',
                                               ax=ax,
-                                              color="blue")
+                                              color="green")
 
   ax.set_title("Daftar 15 kata yang paling sering muncul")
   st.pyplot()
@@ -37,7 +37,11 @@ def get_top15(df):
 
 def show_wordclound(df):
   string = marge_all_text(df)
-  wordcloud = WordCloud(background_color="white").generate(string)
+  tokens = nltk.word_tokenize(string)
+  fdist = FreqDist()
+  for word in tokens:
+    fdist[word.lower()] += 1
+  wordcloud = WordCloud(background_color="white").generate_from_frequencies(frequencies=fdist)
   plt.figure()
   plt.imshow(wordcloud, interpolation="bilinear")
   plt.axis("off")

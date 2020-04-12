@@ -3,6 +3,7 @@ from gensim.models import Phrases
 from gensim import corpora, models
 from gensim.models.ldamodel import LdaModel
 from gensim.corpora.dictionary import Dictionary
+from random import randrange
 
 def get_text_list(df):
   text = df['tweet']
@@ -36,3 +37,15 @@ def get_topic(corpus,dictionary):
                  id2word=dictionary,
                  num_topics=10) #num topic menyesuaikan hasil dari coherence value paling tinggi
   return model.print_topics()
+
+def get_random_topik(list_alltext):
+  rand_index = randrange(10)
+  rand_topic = list_alltext[rand_index]
+  split_topic = rand_topic.split("+")
+  topic_bold = ""
+  for i,string in enumerate(split_topic):
+    if i == 0:
+      topic_bold += "**"+string+"**"
+    else:
+      topic_bold += " + **"+string+"**"
+  return rand_index, topic_bold

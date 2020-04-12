@@ -53,20 +53,22 @@ def topik_modeling():
     corpus = tm.get_corpus(dictionary, text_list)
     topics = tm.get_topic(corpus,dictionary)
     st.header("Hasil Pemodelan Topik dengan LDA")
-    alltext1 = ""
+    str_raw_topic = ""
     for idx, topic in topics:
-      alltext1 += 'Topic '+str(idx+1)+' : '+ topic+'\n'
-    st.write("""```\n"""+alltext1+"""```""")
+      str_raw_topic += 'Topic '+str(idx+1)+' : '+ topic+'\n'
+    st.write("""```\n"""+str_raw_topic+"""```""")
     st.write("""Pada hasil topik modeling diatas setiap topik menampilkan 10 kata kunci teratas 
                 yang paling berkontribusi pada topik tersebut, nilai yang ada pada setiap kata kunci 
                 menyatakan tingkat berkontribusi kata kunci terhadap suatu topik\n
             """)
     st.header("Hasil Akhir")
-    alltext2 = ""
+    str_clean_topic = ""
+    topic_list = []
     for idx, topic in topics:
-      alltext2 += 'Topic '+str(idx+1)+' : '+ cln.extract_topic(topic)+'\n'
-    st.write("""```\n"""+alltext2+"""```""")
-    st.write("""Dari hasil akhir diatas kita akan dapat mengintrepretasikan topik apa saja
-                yang terkandung dalam 1000 tweet yang mengandung kata covid19
-            """) 
-
+      str_clean_topic += 'Topic '+str(idx+1)+' : '+ cln.extract_topic(topic)+'\n'
+      topic_list.append(cln.extract_topic(topic))
+    st.write("""```\n"""+str_clean_topic+"""```""")
+    rand_index, topic_bold = tm.get_random_topik(topic_list)
+    st.write("""Berdasarakan Topik """+str(rand_index+1)+""" :\n\n>"""+
+             topic_bold
+            +"""\n\nKira-kira topik pembahasan apa yang dapat diinterpretasikan?""") 
