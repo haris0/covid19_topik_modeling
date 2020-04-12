@@ -24,11 +24,11 @@ def about_covid():
   st.subheader('Live Global Data')
   global_summary = rq.get_global_summary()
   st.write("""
-        Konfirmasi :\n
+        Kasus Konfirmasi :\n
         > # *"""+global_summary['confirmed']+"""*\n
-        Sembuh :\n
+        Kasus Sembuh :\n
         > # *"""+global_summary['recovered']+"""*\n
-        Meninggal :\n
+        Kasus Meninggal :\n
         > # *"""+global_summary['deaths']+"""*\n
         """)
   st.subheader('Kasus Global Keseluruhan')
@@ -43,7 +43,7 @@ def about_covid():
   time_series = time_series.iloc[39:]
 
   fig, ax = plt.subplots()
-  time_series.plot(kind='line', stacked=False, figsize=(12, 5))
+  time_series.plot(kind='line', stacked=False, figsize=(12, 7))
   plt.xlabel('')
   plt.title('Statistik Covid19 di Indonesia')
   st.pyplot()
@@ -51,11 +51,11 @@ def about_covid():
   st.subheader('Live Indonesia Data')
   indo_summar = rq.get_indo_summary()
   st.write("""
-        Konfirmasi :\n
+        Kasus Konfirmasi :\n
         > # *"""+str(indo_summar[0]['positif'])+"""*\n
-        Sembuh :\n
+        Kasus Sembuh :\n
         > # *"""+str(indo_summar[0]['sembuh'])+"""*\n
-        Meninggal :\n
+        Kasus Meninggal :\n
         > # *"""+str(indo_summar[0]['meninggal'])+"""*\n
         """)
 
@@ -64,7 +64,7 @@ def about_covid():
   st.write(indo_data)
   st.title("Stay Safe Everyone")
   st.write("""
-           Janngan panik dan tetap waspada, mari bantu pemerintah menekan angka 
+           Jangan panik dan tetap waspada, mari bantu pemerintah menekan angka 
            penyebaran pandemi ini dengan #dirumahaja, bagi kalian harus dan terpaksa
            untuk tetap beraktifitas diluar jaga kesehatan dan taati semua protokol kesehatan yang ada
            agar terhindar dari penyebaran virus ini.\n

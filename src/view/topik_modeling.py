@@ -10,8 +10,8 @@ import numpy as np
 
 def topik_modeling():
   st.title('Analisis Tweet Covid19')
-  st.write("""Pada halaman ini akan dilakuakn analsis terhadap 1000 data tweet terbaru
-          berbahahsa indonesia yang mengandung kata covid19, mencakup **Wordcount**, dan **Pemodelan Topik**""")
+  st.write("""Pada halaman ini akan dilakuakn analsis terhadap 1000 data tweet terbaru dari Twitter
+          berbahasa indonesia yang mengandung kata covid19, mencakup **Wordcount**, dan **Pemodelan Topik**""")
   st.text('')
   keyword = 'covid19'
   if st.button("Start Analysis"):
@@ -30,8 +30,7 @@ def topik_modeling():
     
     st.title('Wordcount')
     st.write("""Akan dilakukan penghitungan kata, untuk mengetahui kata yang paling sering muncul
-                dari 1000 data tweet, hal ini dilakuakn untuk memperkirakan keyword dalam topik pembahsan
-                data covid
+                dari 1000 data tweet, hal ini dilakukan untuk memperkirakan kata kunci utama dalam topik pembahasan
             """) 
     st.subheader("Wordcloud :")
     wc.show_wordclound(df)
@@ -47,7 +46,7 @@ def topik_modeling():
     
     st.title('Pemodelan topik')
     st.write("""Akan dilakukan pemodelan topik untuk mengetahui topik bembahasan apa saja yang sedang 
-                dibicarakan terkait covid19, hal ini dilakukan dengan **Latent Dirichlet Allocations**(LDA)
+                dibicarakan terkait covid19, hal ini dilakukan dengan algoritma **Latent Dirichlet Allocations**(LDA)
             """) 
     text_list = tm.get_text_list(df)
     dictionary = tm.get_dictionary(text_list)
@@ -60,14 +59,14 @@ def topik_modeling():
     st.write("""```\n"""+alltext1+"""```""")
     st.write("""Pada hasil topik modeling diatas setiap topik menampilkan 10 kata kunci teratas 
                 yang paling berkontribusi pada topik tersebut, nilai yang ada pada setiap kata kunci 
-                menyatakan tingkat berkontribusi kata kunci terhadapa suatu topik\n
+                menyatakan tingkat berkontribusi kata kunci terhadap suatu topik\n
             """)
     st.header("Hasil Akhir")
     alltext2 = ""
     for idx, topic in topics:
       alltext2 += 'Topic '+str(idx+1)+' : '+ cln.extract_topic(topic)+'\n'
     st.write("""```\n"""+alltext2+"""```""")
-    st.write("""Dari hasil akhir diatas kita akan dapat menintrepretasikan topik apa saja
-                yang terkandung dalam 1000 tweet yang mengandung kata covid
+    st.write("""Dari hasil akhir diatas kita akan dapat mengintrepretasikan topik apa saja
+                yang terkandung dalam 1000 tweet yang mengandung kata covid19
             """) 
 
