@@ -5,7 +5,6 @@ import nltk
 import io
 from nltk.tokenize import WordPunctTokenizer
 import pandas as pd
-nltk.download()
 
 def tweet_cleaner(text):
   tok = WordPunctTokenizer()
