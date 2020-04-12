@@ -4,7 +4,15 @@ This application was created as a concern for the Covid19 outbreak that is curre
 
 ## Preview
 ![page1](page1.PNG)
-![page2](page2.PNG)
+
+
+![page2](page11.PNG)
+
+
+![page1](page2.PNG)
+
+
+![page2](page21.PNG)
 
 ## Instaling Setup
 Following this step to run the app :
