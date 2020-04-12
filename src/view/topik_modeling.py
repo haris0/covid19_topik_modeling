@@ -16,7 +16,6 @@ def topik_modeling():
   keyword = 'covid19'
   if st.button("Start Analysis"):
     with st.spinner('Scarping Data...'):
-      # df = pd.read_csv('covidtweet.csv')
       df = load_tweet(keyword, 1000)
     st.subheader('Raw Data')
     st.dataframe(df)

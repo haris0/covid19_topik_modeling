@@ -4,7 +4,7 @@ from view.about_covid import about_covid
 from view.about_app import about_app
 
 def main():
-  st.sidebar.title("App Mode")
+  st.sidebar.title("Covidian App")
   app_mode = st.sidebar.selectbox("Pilih Halaman",
     ["Pemodelan Topik Covid19", "Tentang Covid19", "Tentang App"])
   if app_mode == "Pemodelan Topik Covid19":
