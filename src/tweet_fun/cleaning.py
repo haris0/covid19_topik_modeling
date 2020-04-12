@@ -10,8 +10,8 @@ def tweet_cleaner(text):
   tok = WordPunctTokenizer()
   pat1 = r'@[A-Za-z0-9]+'
   pat2 = r'\w+:\/\/\S+'
-  pat3 = r'pic.twitter.com/[A-Za-z0-9./]+'
-  pat4 = r'\W*\b\w{1,3}\b'
+  pat3 = r'\W*\b\w{1,3}\b'
+  pat4 = r'\S*twitter.com\S*'
   combined_pat = r'|'.join((pat1, pat2, pat3, pat4))
   soup = BeautifulSoup(text, 'lxml')
   souped = soup.get_text()

@@ -37,7 +37,7 @@ def about_covid():
   st.title("Data Covid Indonesia")
 
   st.subheader('Statistik Kasus Indonesia')
-  with st.spinner('Get Data...'):
+  with st.spinner('Get Data(Beberapa Saat)...'):
     time_series = rq.get_time_series()
   time_series.set_index('date', inplace=True)
   time_series = time_series.iloc[39:]
