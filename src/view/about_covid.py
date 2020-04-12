@@ -10,7 +10,7 @@ from PIL import Image
 def about_covid():
   st.title('Tentang Covid19')
   st.write("""
-  Virus Corona atau severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) adalah 
+  Virus Corona atau *severe acute respiratory syndrome coronavirus 2* (SARS-CoV-2) adalah 
   virus yang menyerang sistem pernapasan. Penyakit karena infeksi virus ini disebut COVID-19. 
   Virus Corona bisa menyebabkan gangguan pada sistem pernapasan, pneumonia akut, sampai kematian.
   \nSumber : [alodokter.com](https://www.alodokter.com/virus-corona)
@@ -78,10 +78,10 @@ def about_covid():
 
   st.subheader('Situs Penting Terkait Covid:')
   st.write("""
-            * Informasi Resmi Pemerintah Republik Indonesia [Pemerintah Indonesia](https://www.covid19.go.id)
-            * Coronavirus disease (COVID-19) advice for the public [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public)
-            * Daftar rumah sakit rujukan pasien virus corona [Halodoc](https://www.halodoc.com/daftar-rumah-sakit-rujukan-untuk-virus-corona)
-            * Novel coronavirus (COVID-19): Hal-hal yang perlu Anda ketahui [Unicef](https://www.unicef.org/indonesia/id/coronavirus)
+            * Informasi Resmi Pemerintah Republik Indonesia, oleh [Pemerintah Indonesia](https://www.covid19.go.id)
+            * Coronavirus disease (COVID-19) advice for the public, oleh [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public)
+            * Daftar rumah sakit rujukan pasien virus corona, oleh [Halodoc](https://www.halodoc.com/daftar-rumah-sakit-rujukan-untuk-virus-corona)
+            * Novel coronavirus (COVID-19): Hal-hal yang perlu Anda ketahui, oleh [Unicef](https://www.unicef.org/indonesia/id/coronavirus)
           """)
   st.subheader('Sumber Data :')
   st.write("[Kawal Corona API](https://kawalcorona.com/api/) dan [Pomber](https://github.com/pomber/covid19)")
