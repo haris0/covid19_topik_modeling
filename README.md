@@ -6,13 +6,13 @@ This application was created as a concern for the Covid19 outbreak that is curre
 ![page1](page1.PNG)
 
 
-![page2](page11.PNG)
+![page2](page1_1.PNG)
 
 
 ![page1](page2.PNG)
 
 
-![page2](page21.PNG)
+![page2](page2_1.PNG)
 
 ## Instaling Setup
 Following this step to run the app :
