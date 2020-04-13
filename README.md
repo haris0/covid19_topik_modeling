@@ -6,7 +6,7 @@ This application was created as a concern for the Covid19 outbreak that is curre
 ![page1](page1.PNG)
 
 
-![page2](page1_1.PNG)
+![page2](page1_1.png)
 
 
 ![page1](page2.PNG)
