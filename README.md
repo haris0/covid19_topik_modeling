@@ -1,8 +1,8 @@
 # Covidian App
 
-This application was created as a concern for the Covid19 outbreak that is currently sweeping the world and as a suggestion to escort the Covid19 pandemic with data analysis.
+This application was created as a concern for the Covid19 pandemic which is currently sweeping the world with an analytical data approach.
 
-By creating tools to analyze data in tweeters so that we can help us find out what topics are being discussed in tweeters related to covid19, the analysis includes Wordcount and Topic Modeling with the Director Allocation Allocation (LDA) algorithm.
+By creating tools for analyzing data on Twitter so we can help us find out what topics are being discussed in data related to covid19, the analysis includes Wordcount and Topic Modeling with the Latent Dirchlect Allocation (LDA) algorithm.
 
 This application is also equipped with various information about Covid19 both globally and regionally. [Demo](https://covidian-app.herokuapp.com/)
 
