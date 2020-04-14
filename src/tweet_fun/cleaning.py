@@ -26,7 +26,7 @@ def tweet_cleaner(text):
   return (" ".join(words)).strip()
 
 def get_norm_dic():
-  norm = pd.read_csv('slang_word.csv')
+  norm = pd.read_csv('./assets/data_helper/slang_word.csv')
   norm_dic = pd.Series(norm.formal.values,index=norm.slang).to_dict()
   return norm_dic
 
@@ -37,7 +37,7 @@ def word_normalize(text, norm_dic):
   return text
 
 def get_stopword(keyword):
-  with io.open('stopword.txt', encoding="utf-8") as f:
+  with io.open('./assets/data_helper/stopword.txt', encoding="utf-8") as f:
     stoptext = f.read().lower()
   stopword = nltk.word_tokenize(stoptext)
   stopword.append(keyword)

@@ -71,7 +71,7 @@ def about_covid():
            "**Seperti semua hal buruk di dunia, ini semua juga akan berlalu, cepat atau lambat**"(Raditya Dika)
           """)
  
-  video_file = open('curves-graphic-social.mp4', 'rb')
+  video_file = open('./assets/img/curves-graphic-social.mp4', 'rb')
   video_bytes = video_file.read()
   st.video(video_bytes)
   st.write('Sumber Data : [Wikipedia](https://commons.wikimedia.org/wiki/File:Covid-19-curves-graphic-social-v3.gif)')
