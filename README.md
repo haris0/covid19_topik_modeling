@@ -7,16 +7,13 @@ By creating tools for analyzing data on Twitter so we can help us find out what 
 This application is also equipped with various information about Covid19 both globally and regionally. [Demo](https://covidian-app.herokuapp.com/)
 
 ## Preview
-![page1](page1.PNG)
+![page1](./assets/img/page1.png)
 
+![page11](./assets/img/page1_1.png)
 
-![page2](page1_1.png)
+![page2](./assets/img/page2.PNG)
 
-
-![page1](page2.PNG)
-
-
-![page2](page2_1.PNG)
+![page21](./assets/img/page2_1.PNG)
 
 ## Instaling Setup
 Following this step to run the app :
