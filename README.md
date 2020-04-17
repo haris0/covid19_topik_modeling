@@ -15,7 +15,7 @@ This application is also equipped with various information about Covid19 both gl
 
 ![page2](./assets/img/page2_1.PNG)
 
-## Instaling Setup
+## Installing Setup
 Following this step to run the app :
 
 - Clone this repo
@@ -29,7 +29,7 @@ Following this step to run the app :
   streamlit run src/app.py
   ```
 
-## Data Apis
+## Data APIs
 Source of APIs used in this application :
 
 - [kawalcorona.com](https://kawalcorona.com/api/)
