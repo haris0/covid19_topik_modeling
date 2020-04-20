@@ -23,6 +23,7 @@ def get_data(url):
   response = requests.get(url)
   return response.json()
 
+@st.cache
 def get_loc_df():
   data = get_data(global_loc_apis)
   df = pd.DataFrame.from_dict(pd.json_normalize(data), orient='columns')
@@ -34,6 +35,7 @@ def get_loc_df():
   df_loc = df_loc.apply(pd.to_numeric)
   return df_loc
 
+@st.cache
 def get_global_data():
   data = get_data(global_loc_apis)
   df = pd.DataFrame.from_dict(pd.json_normalize(data), orient='columns')
@@ -48,6 +50,7 @@ def get_global_data():
   df_global['Update'] = df['attributes.Last_Update'].apply(lambda timestamp: convert_timestamp(timestamp))
   return df_global
 
+@st.cache
 def get_global_summary():
   confirmed = get_data(global_confirmed)
   recovered = get_data(global_recovered)
@@ -59,10 +62,12 @@ def get_global_summary():
   }
   return data
 
+@st.cache
 def get_indo_summary():
   response = get_data(indo_summary)
   return response
 
+@st.cache
 def get_indo_data():
   data = get_data(indo_data)
   df = pd.DataFrame.from_dict(pd.json_normalize(data), orient='columns')
@@ -75,6 +80,7 @@ def get_indo_data():
   df_indo['Meninggal'] = df['attributes.Kasus_Meni']
   return df_indo
 
+@st.cache
 def get_time_series():
   data = get_data(time_series)
   data_indo = data['Indonesia']

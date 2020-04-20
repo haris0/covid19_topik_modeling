@@ -1,5 +1,6 @@
 import twint
 
+@st.cache
 def load_tweet(keyword, limit):
 
   c = twint.Config()
