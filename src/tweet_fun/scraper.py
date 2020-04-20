@@ -1,4 +1,5 @@
 import twint
+import streamlit as st
 
 @st.cache
 def load_tweet(keyword, limit):
