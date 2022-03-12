@@ -10,4 +10,4 @@ wordcloud==1.6.0
 pandas==1.0.3
 twint==2.1.18
 beautifulsoup4==4.9.0
-Pillow==7.1.1
+Pillow==9.0.1
